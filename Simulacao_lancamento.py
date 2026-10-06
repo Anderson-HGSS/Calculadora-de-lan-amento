@@ -57,14 +57,15 @@ def main():
     for i in range(respostas[0]):
         eixo_y.append(i)
 
-    plt.plot(eixo_y, resultado_pos)
-    plt.show()
-
-
     for i in range(len(resultado_vel)):
         print(f"{i+1}° segundo:")
         print(f"Velocidade: {round(resultado_vel[i], 2)} ")
         print(f"Posição atual: {round(resultado_pos[i], 2)}\n")
+        
+    plt.plot(eixo_y, resultado_pos)
+    plt.ylabel("Altura (altura do chão é 0)")
+    plt.xlabel("Tempo (em segundos)")
+    plt.show()
         
 
 if __name__ == "__main__":
